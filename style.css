@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0d1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 25px 15px;
+  background: linear-gradient(90deg, #002b63, #001a35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+  color: #46b2ff;
+  text-shadow: 0 0 15px #009dff;
+}
+
+#search {
+  padding: 10px 20px;
+  width: 60%;
+  max-width: 380px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+#search:focus {
+  box-shadow: 0 0 10px #00aaff;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px 30px;
+  justify-items: center;
+}
+
+/* CARD */
+.card {
+  background-color: #10142c;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 132, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 162, 255, 0.6);
+}
+
+/* maintain 16:9 ratio */
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid #007bff;
+}
+
+.card-content {
+  padding: 14px 15px 18px;
+  text-align: center;
+}
+
+.card-content h3 {
+  color: #62c0ff;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: #cdd9ff;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  min-height: 34px;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, box-shadow 0.3s;
+  font-size: 0.9rem;
+}
+
+.download-btn:hover {
+  background-color: #0099ff;
+  box-shadow: 0 0 15px #0099ff;
+}
+
+.size-label {
+  display: block;
+  margin-top: 8px;
+  color: #8fbfff;
+  font-size: 0.8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #9bbde0;
+  background: #0b0d1a;
+  font-size: 0.9rem;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #search {
+    width: 80%;
+    max-width: none;
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 25px 15px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    font-size: 0.75rem;
+  }
+
+  .download-btn {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
+
+  .size-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* ---- SMALL PHONES ---- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
