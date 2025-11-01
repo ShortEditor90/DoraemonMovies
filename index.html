@@ -14,8 +14,32 @@
 
   <main id="movie-container" class="grid"></main>
 
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal">
+    <div class="backdrop"></div>
+    <div class="player-container">
+      <div class="player-header">
+        <h2 id="playerTitle">Now Playing</h2>
+        <button id="closeBtn" class="close">&times;</button>
+      </div>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Disclaimer Section -->
+  <section class="disclaimer">
+    <h3>Disclaimer</h3>
+    <p>
+      This website is a fan-made collection created purely for personal organization and entertainment.<br>
+      All Doraemon movies, images, and content belong to their respective owners —
+      <strong>© Fujiko F. Fujio / Shin-Ei Animation / TV Asahi</strong>.<br>
+      No copyright infringement is intended, and no files are hosted or owned by this website.
+    </p>
+  </section>
+
   <footer>
     <p>Made with ❤ by Short Editor</p>
+    <small>All rights belong to their respective owners. No copyright infringement intended.</small>
   </footer>
 
   <script src="script.js"></script>
